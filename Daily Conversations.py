@@ -53,9 +53,11 @@ def get_agent_conversations_count(website_id, agent_id):
     
     # Write the results to a CSV file
     with open('conversations_count.csv', 'w', newline='') as file:
+        #prefix the above with the agent name, such as 'gino_conversations_count.csv'
         writer = csv.writer(file)
         writer.writerow(['Date', 'Count'])  # Write header row
         for date, count in sorted(date_counts.items()):
             writer.writerow([date, count])  # Write data rows
 
-get_agent_conversations_count('854228c2-0dc4-4b4a-875e-4ead05d1a46b', '3a767972-87d0-4c60-862a-ed2dfbc222a0')
+get_agent_conversations_count('854228c2-0dc4-4b4a-875e-4ead05d1a46b', 'PASTE AGENT ID HERE')
+#Paste the agent ID above leaving the ' ' either side
